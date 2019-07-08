@@ -7,6 +7,6 @@ RUN cd /tmp && wget https://cyber.manhtuong.net/file/acunetix_trial.sh && chmod 
 
 ADD install.expect /tmp/install.expect
 RUN cd /tmp && chmod +x /tmp/install.expect && /tmp/install.expect
-ADD patch_awvs /tmp/patch_awvs
-RUN cd /tmp && chmod +x /tmp/patch_awvs && /tmp/patch_awvs
+ADD patch_awvs /home/acunetix/.acunetix_trial/v_190515149/scanner/patch_awvs
+RUN cd /home/acunetix/.acunetix_trial/v_190515149/scanner && chmod +x /home/acunetix/.acunetix_trial/v_190515149/scanner/patch_awvs && /home/acunetix/.acunetix_trial/v_190515149/scanner/patch_awvs
 CMD su -l acunetix -c /home/acunetix/.acunetix_trial/start.sh
